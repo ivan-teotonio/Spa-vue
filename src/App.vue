@@ -8,7 +8,22 @@
   </div>
 </template>
 
-<style>
+<script>
+ 
+  export default{
+
+  created(){
+      this.$http.get('/ping').then((response) => {
+         console.log(response)
+      })
+    }
+  }  
+
+
+
+</script>
+
+<style scope>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
